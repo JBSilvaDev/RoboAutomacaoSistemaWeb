@@ -30,3 +30,5 @@ Por favor, atualize esta seção com uma descrição mais específica do que est
 
 "Este robô navega para [URL do site], faz login, lê os dados do `challenge.xlsx` e realiza [ações específicas, por exemplo, entrada de dados, geração de relatórios] no site."
 
+"RPA criado como desafio do curso Automatize Process com Erimateia"
+
