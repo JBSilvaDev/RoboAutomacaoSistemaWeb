@@ -111,13 +111,13 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1138,3263" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap:VirtualizedContainerService.HintSize="1155,778.04" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Ler arquivo excel" sap:VirtualizedContainerService.HintSize="450,694" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Ler arquivo excel" sap:VirtualizedContainerService.HintSize="450,717" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtPlanilhaExcel" />
       </Sequence.Variables>
@@ -134,7 +134,7 @@
           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtPlanilhaExcel">[dtPlanilhaExcel]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Fim do primeiro processo&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Fim do primeiro processo&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>
