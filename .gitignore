@@ -35,3 +35,4 @@ node_modules/
 
 # Ignore output folders
 Downloads/
+.runtime/
