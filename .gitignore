@@ -25,7 +25,6 @@
 *.tmp
 *.temp
 ~$*
-Dados.csv
 
 # Ignore system files
 .DS_Store
@@ -35,5 +34,4 @@ Thumbs.db
 node_modules/
 
 # Ignore output folders
-Downloads/
 .runtime/
