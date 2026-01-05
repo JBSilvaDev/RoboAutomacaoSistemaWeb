@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Ler arquivo excel" sap:VirtualizedContainerService.HintSize="450,717" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Ler arquivo excel" sap:VirtualizedContainerService.HintSize="450,544" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dtPlanilhaExcel" />
       </Sequence.Variables>
@@ -128,13 +128,12 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Efetuando leitura arquivo excel&quot;]" />
       <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dtPlanilhaExcel]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="416,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="arquivos\challenge.xlsx" />
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PreencherForms - Invoke Workflow File (ProcessBox\PrimeiroProcesso\PreencherForms\PreencherForms.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ProcessBox\PrimeiroProcesso\PreencherForms\PreencherForms.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PreencherForms - Invoke Workflow File (ProcessBox\PrimeiroProcesso\PreencherForms\PreencherForms.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ProcessBox\PrimeiroProcesso\PreencherForms\PreencherForms.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="ui:UiElement" x:Key="in_ElementoWeb">[in_ElementoWeb]</InArgument>
           <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtPlanilhaExcel">[dtPlanilhaExcel]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Fim do primeiro processo&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>

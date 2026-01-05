@@ -54,6 +54,7 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -140,19 +141,20 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1138,1077" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence sap:VirtualizedContainerService.HintSize="1138,1250" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="ExtracaoInvoces" sap:VirtualizedContainerService.HintSize="484,1054" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence DisplayName="ExtracaoInvoces" sap:VirtualizedContainerService.HintSize="484,1227" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extraindo dados do site&quot;]" />
       <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Rpa Challenge(1)" sap:VirtualizedContainerService.HintSize="450,971" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="[io_ElementoWeb]" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" OutUiElement="[io_ElementoWeb]" ScopeGuid="9a4fba9d-f69c-463b-a22e-226ff4032e29" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">

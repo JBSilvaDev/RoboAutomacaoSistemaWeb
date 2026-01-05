@@ -144,31 +144,33 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1138,1274" sap2010:WorkflowViewState.IdRef="Sequence_30">
+  <Sequence sap:VirtualizedContainerService.HintSize="1138,1795" sap2010:WorkflowViewState.IdRef="Sequence_30">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="FinalizacaoCSV" sap:VirtualizedContainerService.HintSize="540,1251" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence DisplayName="FinalizacaoCSV" sap:VirtualizedContainerService.HintSize="540,1772" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="506,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Criando CSV&quot;]" />
       <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[in_dtInvoices]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write CSV" FilePath="arquivos\Dados.csv" sap:VirtualizedContainerService.HintSize="506,234" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" ShouldQuote="True" />
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Rpa Challenge" sap:VirtualizedContainerService.HintSize="506,934" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InUiElement="[in_ElementoWeb]" InteractionMode="DebuggerApi" ScopeGuid="afce1d15-f0ef-4a70-b22c-381e93d7f1cd" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Rpa Challenge" sap:VirtualizedContainerService.HintSize="506,1282" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InUiElement="[in_ElementoWeb]" InteractionMode="DebuggerApi" ScopeGuid="afce1d15-f0ef-4a70-b22c-381e93d7f1cd" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,774" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1122" sap2010:WorkflowViewState.IdRef="Sequence_29">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Enviando CSV para o site&quot;]" />
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Previous'" sap:VirtualizedContainerService.HintSize="438,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="afce1d15-f0ef-4a70-b22c-381e93d7f1cd" Version="V4">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="rpachallengeocr.azurewebsites.net" CVScreenId="0b8a1e5d-ecac-4928-9404-763c291c406a" ContentHash="T0ano1TdKEKCw9vGrvZ5xQ" CvElementArea="1021, 588, 511, 78" CvTextArea="1237, 617, 79, 20" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="1025, 592, 503, 73" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='file' class='' aaname='' /&gt;" Guid="3872ba7f-b5ef-40b0-a855-f2f508e56fed" InformativeScreenshot="fae66d60ae3e30e8933ca156730edacc.png" Reference="8QhObOOihEuMK7gzO-kovA/MMvBd96hVUqj0S4PVZH_tw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Automation Challenge - OCR' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
@@ -190,7 +192,7 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,487" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,494" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Nome'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="400,234" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InUiElement="[in_ElementoWeb]" InteractionMode="HardwareEvents" ScopeIdentifier="afce1d15-f0ef-4a70-b22c-381e93d7f1cd" Text="[Environment.CurrentDirectory+&quot;\arquivos\Dados.csv[k(Enter)]&quot;]" Version="V4">
                     <uix:NTypeInto.Target>
@@ -235,11 +237,12 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="uue:VerifyActivityExecutionException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="394,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Erro no target, porem processo foi concluido&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="398,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;Erro no target, porem processo foi concluido&quot;]" />
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,168" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Fechando navegador&quot;]" />
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>

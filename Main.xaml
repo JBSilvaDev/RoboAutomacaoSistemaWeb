@@ -59,6 +59,7 @@
       <x:String>UiPath.CSV.Activities</x:String>
       <x:String>UiPath.CSV</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -155,25 +156,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="600,648" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1155,778.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">275,35</av:Point>
           <av:Size x:Key="ShapeSize">50,50</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,85 300,125</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,85 300,135</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
         <x:Reference>__ReferenceID3</x:Reference>
       </Flowchart.StartNode>
-      <FlowStep x:Name="__ReferenceID2">
+      <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">245,235</av:Point>
+            <av:Point x:Key="ShapeLocation">245,135</av:Point>
             <av:Size x:Key="ShapeSize">110,70</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,305 300,345</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,205 300,235</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Sequence DisplayName="Inicilizar navegador" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -182,6 +183,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Inicializando navegador&quot;]" />
           <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Rpa Challenge" sap:VirtualizedContainerService.HintSize="450,470" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" OutUiElement="[ElementoWeb]" ScopeGuid="947d6997-d6fc-4546-a2a0-262b40f28306" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
@@ -204,12 +206,12 @@
           </uix:NApplicationCard>
         </Sequence>
         <FlowStep.Next>
-          <FlowStep x:Name="__ReferenceID0">
+          <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:Point x:Key="ShapeLocation">245,345</av:Point>
+                <av:Point x:Key="ShapeLocation">245,235</av:Point>
                 <av:Size x:Key="ShapeSize">110,70</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,415 300,465</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">300,305 300,355</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Sequence DisplayName="Primeiro processo" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -218,248 +220,334 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LerArquivoExcel - Invoke Workflow File (ProcessBox\PrimeiroProcesso\PreencherForms\LerArquivoExcel.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ProcessBox\PrimeiroProcesso\PreencherForms\LerArquivoExcel.xaml">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Executando primeiro processo&quot;]" />
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LerArquivoExcel - Invoke Workflow File (ProcessBox\PrimeiroProcesso\PreencherForms\LerArquivoExcel.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ProcessBox\PrimeiroProcesso\PreencherForms\LerArquivoExcel.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="ui:UiElement" x:Key="in_ElementoWeb">[ElementoWeb]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Fim do primeiro processo&quot;]" />
             </Sequence>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID1">
+              <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">245,465</av:Point>
+                    <av:Point x:Key="ShapeLocation">245,355</av:Point>
                     <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">300,425 300,465</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Segundo proceso" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="dtTabelaWeb" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="dtInvoices" />
-                    <Variable x:TypeArguments="x:String" Name="strPath" />
-                    <Variable x:TypeArguments="x:String" Name="strName" />
-                    <Variable x:TypeArguments="x:String" Name="strDueInvoce" />
-                    <Variable x:TypeArguments="s:DateTime" Name="dateDueInvoice" />
-                    <Variable x:TypeArguments="x:String" Name="strInvoiceText" />
-                    <Variable x:TypeArguments="x:String" Name="strInvoiceNum" />
-                    <Variable x:TypeArguments="x:String" Name="strInvoiceDate" />
-                    <Variable x:TypeArguments="x:String" Name="strInvoiceCompany" />
-                    <Variable x:TypeArguments="x:String" Name="strInvoiceTotalDue" />
-                  </Sequence.Variables>
+                <Sequence DisplayName="LimparDados" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_32">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExtracaoInvoces - Invoke Workflow File (ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\ExtracaoInvoces.xaml)" sap:VirtualizedContainerService.HintSize="570,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\ExtracaoInvoces.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_ElementoWeb">[ElementoWeb]</InOutArgument>
-                      <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtTabelaWeb">[dtTabelaWeb]</OutArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                  <ui:BuildDataTable DataTable="[dtInvoices]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="570,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;DueDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;InvoiceNo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;InvoiceDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;TotalDue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-                  <Sequence DisplayName="VerificarExtrairUploadDados" sap:VirtualizedContainerService.HintSize="570,1208" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Int32" Name="intIndex" />
-                    </Sequence.Variables>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Limpando dados antigos&quot;]" />
+                  <ui:ForEachFileX DisplayName="Downloads" Folder="C:\Users\julianobs\OneDrive - Suzano S A\Area Dev\GitHub\UiPath\RoboAutomacaoSistemaWeb\ProcessBox\SegundoProcesso\Downloads" sap:VirtualizedContainerService.HintSize="450,463" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                    <ui:ForEachFileX.Body>
+                      <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                        <ActivityAction.Argument1>
+                          <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                        </ActivityAction.Argument1>
+                        <ActivityAction.Argument2>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                        </ActivityAction.Argument2>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Delete ResourceFile="{x:Null}" ContinueOnError="True" DisplayName="Delete File or Folder" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delete_3" Path="[CurrentFile.FullName]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEachFileX.Body>
+                  </ui:ForEachFileX>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="450,341" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <ui:Delete ResourceFile="{x:Null}" ContinueOnError="True" DisplayName="Delete File or Folder" sap:VirtualizedContainerService.HintSize="400,90" sap2010:WorkflowViewState.IdRef="Delete_4" Path="C:/Users/julianobs/OneDrive - Suzano S A/Area Dev/GitHub/UiPath/RoboAutomacaoSistemaWeb/arquivos/Dados.csv" />
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="394,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Dados.csv não encontrado&quot;]" />
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">245,465</av:Point>
+                        <av:Size x:Key="ShapeSize">110,70</av:Size>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intIndex]" DataTable="[dtTabelaWeb]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="536,957" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-                      <ui:ForEachRow.Body>
-                        <ActivityAction x:TypeArguments="sd:DataRow">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502,761" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap2010:Annotation.AnnotationText="Pasta onde armazena os arquivos baixados e nome com base no index" DisplayName="PastaDownlaod" sap:VirtualizedContainerService.HintSize="468,342" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[strPath]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Environment.CurrentDirectory &amp; "\ProcessBox\SegundoProcesso\Downloads\"]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[strName]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[(intIndex + 1).ToString() &amp; ".jpg"]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                            </Sequence>
-                            <Sequence DisplayName="ConvesaoData" sap:VirtualizedContainerService.HintSize="468,311" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[strDueInvoce]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[CurrentRow("Due Date").ToString.Replace("-","/")]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="s:DateTime">[dateDueInvoice]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(strDueInvoce, "dd/MM/yyyy", Nothing)]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                            </Sequence>
-                            <Sequence DisplayName="DownloadExtracao" sap:VirtualizedContainerService.HintSize="468,48" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:IfElseIfV2 Condition="[dateDueInvoice &lt;= Today]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="581,1389" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
-                                <ui:IfElseIfV2.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="547,25" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Sequence>
-                                </ui:IfElseIfV2.Else>
-                                <ui:IfElseIfV2.ElseIfs>
-                                  <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
-                                </ui:IfElseIfV2.ElseIfs>
-                                <ui:IfElseIfV2.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="547,1155" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="Downloads" sap:VirtualizedContainerService.HintSize="513,57" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" Headers="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xD;&#xA;{&#xD;&#xA;&#x9;New FileFormDataPart(),&#xD;&#xA;&#x9;New BinaryFormDataPart(),&#xD;&#xA;&#x9;New TextFormDataPart()&#xD;&#xA;}]" sap:VirtualizedContainerService.HintSize="416,264" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="GET" Multiplier="2" OutputFileName="[strName]" OutputFileTargetFolder="[strPath]" PreferRetryAfterValue="True" RequestBodyType="None" RequestUrl="[CurrentRow(&quot;Invoce_Url&quot;).ToString]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xD;&#xA;{&#xD;&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xD;&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="True" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
-                                        <uwah:NetHttpRequest.TimeoutInMiliseconds>
-                                          <InArgument x:TypeArguments="s:Nullable(x:Int32)">
-                                            <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
-                                          </InArgument>
-                                        </uwah:NetHttpRequest.TimeoutInMiliseconds>
-                                      </uwah:NetHttpRequest>
-                                    </Sequence>
-                                    <Sequence DisplayName="FaturasTXT" sap:VirtualizedContainerService.HintSize="513,422" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                                      <Sequence.Variables>
-                                        <Variable x:TypeArguments="ui:Image" Name="imgInvoice" />
-                                        <Variable x:TypeArguments="x:String" Name="chaveAPI" />
-                                      </Sequence.Variables>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LoadImage DisplayName="Load Image" FileName="[strPath + &quot;\&quot; +strName]" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[imgInvoice]" />
-                                      <p:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" UseLocalServer="{x:Null}" ApiKey="ZZpgwdV1IOrxZsjOBhOj2ItfpGg8/FviSC0VdAEe2Z7n/UaFRCUURLxRAc28uaNrdnuVQmcgbeTUJVcoH8G1ig==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[imgInvoice]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Text="[strInvoiceText]" Timeout="100000" />
-                                      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[strPath + &quot;\&quot; +strName.Replace(&quot;.jpg&quot;,&quot;.txt&quot;)]" sap:VirtualizedContainerService.HintSize="416,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[strInvoiceText]" />
-                                    </Sequence>
-                                    <Sequence DisplayName="RegexDadosFaturas" sap:VirtualizedContainerService.HintSize="513,324" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,232" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                                        <ui:MultipleAssign.AssignOperations>
-                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">[strInvoiceNum]</OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "(?&lt;=INVOICE\s#)(\d+)|(?&lt;=Invoice\s#)(\d+)").Value]</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">[strInvoiceDate]</OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "(\d{4}-\d{2}-\d{2})").Value]</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">[strInvoiceCompany]</OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "^(.*?)(?=\s(?:INVOICE|invoice))").Value]</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">[strInvoiceTotalDue]</OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "(?&lt;=Total\s)[\d+.]+").Value]</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                          </scg:List>
-                                        </ui:MultipleAssign.AssignOperations>
-                                      </ui:MultipleAssign>
-                                    </Sequence>
-                                    <Sequence DisplayName="SalvarDadosTabela" sap:VirtualizedContainerService.HintSize="513,292" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;ID&quot;), CurrentRow(&quot;Due Date&quot;), strInvoiceNum, DateTime.ParseExact(strInvoiceDate, &quot;yyyy-MM-dd&quot;, Nothing).ToString(&quot;dd-MM-yyyy&quot;), strInvoiceCompany, strInvoiceTotalDue}]" DataTable="[dtInvoices]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                                    </Sequence>
-                                  </Sequence>
-                                </ui:IfElseIfV2.Then>
-                              </ui:IfElseIfV2>
-                            </Sequence>
-                          </Sequence>
-                        </ActivityAction>
-                      </ui:ForEachRow.Body>
+                    <Sequence DisplayName="Segundo proceso" sap:VirtualizedContainerService.HintSize="751,4025" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="dtTabelaWeb" />
+                        <Variable x:TypeArguments="sd:DataTable" Name="dtInvoices" />
+                        <Variable x:TypeArguments="x:String" Name="strPath" />
+                        <Variable x:TypeArguments="x:String" Name="strName" />
+                        <Variable x:TypeArguments="x:String" Name="strDueInvoce" />
+                        <Variable x:TypeArguments="s:DateTime" Name="dateDueInvoice" />
+                        <Variable x:TypeArguments="x:String" Name="strInvoiceText" />
+                        <Variable x:TypeArguments="x:String" Name="strInvoiceNum" />
+                        <Variable x:TypeArguments="x:String" Name="strInvoiceDate" />
+                        <Variable x:TypeArguments="x:String" Name="strInvoiceCompany" />
+                        <Variable x:TypeArguments="x:String" Name="strInvoiceTotalDue" />
+                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ui:ForEachRow>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FinalizacaoCSV - Invoke Workflow File (ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\FinalizacaoCSV.xaml)" sap:VirtualizedContainerService.HintSize="536,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\FinalizacaoCSV.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtInvoices">[dtInvoices]</InArgument>
-                        <InArgument x:TypeArguments="ui:UiElement" x:Key="in_ElementoWeb">[ElementoWeb]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </Sequence>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExtracaoInvoces - Invoke Workflow File (ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\ExtracaoInvoces.xaml)" sap:VirtualizedContainerService.HintSize="717,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\ExtracaoInvoces.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_ElementoWeb">[ElementoWeb]</InOutArgument>
+                          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtTabelaWeb">[dtTabelaWeb]</OutArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="717,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Criando DT Local&quot;]" />
+                      <ui:BuildDataTable DataTable="[dtInvoices]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="717,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;DueDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;InvoiceNo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;InvoiceDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;TotalDue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+                      <Sequence DisplayName="VerificarExtrairUploadDados" sap:VirtualizedContainerService.HintSize="717,3523" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Int32" Name="intIndex" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="683,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Verificando dados extraidos para baixar invoices vencidas&quot;]" />
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[intIndex]" DataTable="[dtTabelaWeb]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="683,3099" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="649,2903" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence sap2010:Annotation.AnnotationText="Pasta onde armazena os arquivos baixados e nome com base no index" DisplayName="PastaDownlaod" sap:VirtualizedContainerService.HintSize="615,342" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[strPath]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[Environment.CurrentDirectory &amp; "\ProcessBox\SegundoProcesso\Downloads\"]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[strName]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[(intIndex + 1).ToString() &amp; ".jpg"]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                                <Sequence DisplayName="ConvesaoData" sap:VirtualizedContainerService.HintSize="615,311" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[strDueInvoce]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[CurrentRow("Due Date").ToString.Replace("-","/")]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:DateTime">[dateDueInvoice]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(strDueInvoce, "dd/MM/yyyy", Nothing)]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                                <Sequence DisplayName="DownloadExtracao" sap:VirtualizedContainerService.HintSize="615,2190" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:IfElseIfV2 Condition="[dateDueInvoice &lt;= Today]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="581,2107" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+                                    <ui:IfElseIfV2.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="547,25" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </ui:IfElseIfV2.Else>
+                                    <ui:IfElseIfV2.ElseIfs>
+                                      <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
+                                    </ui:IfElseIfV2.ElseIfs>
+                                    <ui:IfElseIfV2.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="547,1873" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Sequence DisplayName="Downloads" sap:VirtualizedContainerService.HintSize="513,356" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uwah:NetHttpRequest BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" FilePath="{x:Null}" FormData="{x:Null}" Headers="{x:Null}" LocalFiles="{x:Null}" OAuthToken="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" ProxyConfiguration="{x:Null}" ResourceFiles="{x:Null}" TextPayload="{x:Null}" AuthenticationType="None" ContinueOnError="True" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FollowRedirects="True" FormDataParts="[New List (Of FormDataPart) From _&#xD;&#xA;{&#xD;&#xA;&#x9;New FileFormDataPart(),&#xD;&#xA;&#x9;New BinaryFormDataPart(),&#xD;&#xA;&#x9;New TextFormDataPart()&#xD;&#xA;}]" sap:VirtualizedContainerService.HintSize="416,264" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" InitialDelay="500" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="GET" Multiplier="2" OutputFileName="[strName]" OutputFileTargetFolder="[strPath]" PreferRetryAfterValue="True" RequestBodyType="None" RequestUrl="[CurrentRow(&quot;Invoce_Url&quot;).ToString]" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xD;&#xA;{&#xD;&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xD;&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xD;&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="True" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+                                            <uwah:NetHttpRequest.TimeoutInMiliseconds>
+                                              <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                                                <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000" />
+                                              </InArgument>
+                                            </uwah:NetHttpRequest.TimeoutInMiliseconds>
+                                          </uwah:NetHttpRequest>
+                                        </Sequence>
+                                        <Sequence DisplayName="FaturasTXT" sap:VirtualizedContainerService.HintSize="513,422" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="ui:Image" Name="imgInvoice" />
+                                            <Variable x:TypeArguments="x:String" Name="chaveAPI" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:LoadImage DisplayName="Load Image" FileName="[strPath + &quot;\&quot; +strName]" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[imgInvoice]" />
+                                          <p:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" UseLocalServer="{x:Null}" ApiKey="ZZpgwdV1IOrxZsjOBhOj2ItfpGg8/FviSC0VdAEe2Z7n/UaFRCUURLxRAc28uaNrdnuVQmcgbeTUJVcoH8G1ig==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[imgInvoice]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Text="[strInvoiceText]" Timeout="100000" />
+                                          <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[strPath + &quot;\&quot; +strName.Replace(&quot;.jpg&quot;,&quot;.txt&quot;)]" sap:VirtualizedContainerService.HintSize="416,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[strInvoiceText]" />
+                                        </Sequence>
+                                        <Sequence DisplayName="RegexDadosFaturas" sap:VirtualizedContainerService.HintSize="513,324" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,232" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                            <ui:MultipleAssign.AssignOperations>
+                                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[strInvoiceNum]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "(?&lt;=INVOICE\s#)(\d+)|(?&lt;=Invoice\s#)(\d+)").Value]</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[strInvoiceDate]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "(\d{4}-\d{2}-\d{2})").Value]</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[strInvoiceCompany]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "^(.*?)(?=\s(?:INVOICE|invoice))").Value]</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                                  <ui:AssignOperation.To>
+                                                    <OutArgument x:TypeArguments="x:String">[strInvoiceTotalDue]</OutArgument>
+                                                  </ui:AssignOperation.To>
+                                                  <ui:AssignOperation.Value>
+                                                    <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(strInvoiceText, "(?&lt;=Total\s)[\d+.]+").Value]</InArgument>
+                                                  </ui:AssignOperation.Value>
+                                                </ui:AssignOperation>
+                                              </scg:List>
+                                            </ui:MultipleAssign.AssignOperations>
+                                          </ui:MultipleAssign>
+                                        </Sequence>
+                                        <Sequence DisplayName="SalvarDadosTabela" sap:VirtualizedContainerService.HintSize="513,711" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <If Condition="[intIndex &lt; 1]" sap:VirtualizedContainerService.HintSize="450,419" sap2010:WorkflowViewState.IdRef="If_2">
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Salvando dados na tabela local&quot;]" />
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;ID&quot;), CurrentRow(&quot;Due Date&quot;), strInvoiceNum, DateTime.ParseExact(strInvoiceDate, &quot;yyyy-MM-dd&quot;, Nothing).ToString(&quot;dd-MM-yyyy&quot;), strInvoiceCompany, strInvoiceTotalDue}]" DataTable="[dtInvoices]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="450,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                        </Sequence>
+                                      </Sequence>
+                                    </ui:IfElseIfV2.Then>
+                                  </ui:IfElseIfV2>
+                                </Sequence>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:ForEachRow>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FinalizacaoCSV - Invoke Workflow File (ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\FinalizacaoCSV.xaml)" sap:VirtualizedContainerService.HintSize="683,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="ProcessBox\SegundoProcesso\BaixarExtrairDadosPDF\FinalizacaoCSV.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtInvoices">[dtInvoices]</InArgument>
+                            <InArgument x:TypeArguments="ui:UiElement" x:Key="in_ElementoWeb">[ElementoWeb]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </Sequence>
+                  </FlowStep>
+                </FlowStep.Next>
               </FlowStep>
             </FlowStep.Next>
           </FlowStep>
@@ -467,46 +555,7 @@
       </FlowStep>
       <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID1</x:Reference>
-      <FlowStep x:Name="__ReferenceID3">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">245,125</av:Point>
-            <av:Size x:Key="ShapeSize">110,70</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,195 300,235</av:PointCollection>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="LimparDados" sap:VirtualizedContainerService.HintSize="484,636" sap2010:WorkflowViewState.IdRef="Sequence_32">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachFileX DisplayName="Downloads" Folder="C:\Users\julianobs\OneDrive - Suzano S A\Area Dev\GitHub\UiPath\RoboAutomacaoSistemaWeb\ProcessBox\SegundoProcesso\Downloads" sap:VirtualizedContainerService.HintSize="450,463" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
-            <ui:ForEachFileX.Body>
-              <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
-                <ActivityAction.Argument1>
-                  <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
-                </ActivityAction.Argument1>
-                <ActivityAction.Argument2>
-                  <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                </ActivityAction.Argument2>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_33">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Delete ContinueOnError="{x:Null}" ResourceFile="{x:Null}" DisplayName="Delete File or Folder" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delete_3" Path="[CurrentFile.FullName]" />
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachFileX.Body>
-          </ui:ForEachFileX>
-          <ui:Delete ContinueOnError="{x:Null}" ResourceFile="{x:Null}" DisplayName="Delete File or Folder" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Delete_4" Path="C:/Users/julianobs/OneDrive - Suzano S A/Area Dev/GitHub/UiPath/RoboAutomacaoSistemaWeb/arquivos/Dados.csv" />
-        </Sequence>
-        <FlowStep.Next>
-          <x:Reference>__ReferenceID2</x:Reference>
-        </FlowStep.Next>
-      </FlowStep>
+      <x:Reference>__ReferenceID2</x:Reference>
     </Flowchart>
   </Sequence>
 </Activity>
