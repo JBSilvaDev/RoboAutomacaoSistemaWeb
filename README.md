@@ -24,11 +24,5 @@ Este projeto contém um robô UiPath projetado para automatizar interações com
 3.  **Configure os dados de entrada:** Verifique se o arquivo `arquivos/challenge.xlsx` contém os dados necessários no formato esperado.
 4.  **Execute o fluxo de trabalho:** Clique no botão "Executar" no UiPath Studio para executar a automação.
 
-## Descrição (Espaço Reservado - Por Favor Atualize)
-
-Por favor, atualize esta seção com uma descrição mais específica do que este robô faz. Por exemplo:
-
-"Este robô navega para [URL do site], faz login, lê os dados do `challenge.xlsx` e realiza [ações específicas, por exemplo, entrada de dados, geração de relatórios] no site."
-
 "RPA criado como desafio do curso Automatize Process com Erimateia"
 
