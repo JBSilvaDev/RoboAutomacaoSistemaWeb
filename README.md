@@ -23,6 +23,11 @@ Este projeto contém um robô UiPath projetado para automatizar interações com
 2.  **Certifique-se de que as dependências estão resolvidas:** O UiPath Studio deve restaurar automaticamente quaisquer pacotes de atividades ausentes.
 3.  **Configure os dados de entrada:** Verifique se o arquivo `arquivos/challenge.xlsx` contém os dados necessários no formato esperado.
 4.  **Execute o fluxo de trabalho:** Clique no botão "Executar" no UiPath Studio para executar a automação.
+5.  
+
+
+Desafio cumprido
+![1767646147524](image/README/1767646147524.png)
 
 "RPA criado como desafio do curso Automatize Process com Erimateia"
 
