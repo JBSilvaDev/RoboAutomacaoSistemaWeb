@@ -27,7 +27,8 @@ Este projeto contém um robô UiPath projetado para automatizar interações com
 
 
 Desafio cumprido
-![1767646147524](image/README/1767646147524.png)
+![Etapa 1](image/README/1767650095637.png)
+![Etapa 2](image/README/1767646147524.png)
 
 "RPA criado como desafio do curso Automatize Process com Erimateia"
 
