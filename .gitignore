@@ -26,7 +26,6 @@
 *.temp
 ~$*
 
-
 # Ignore system files
 .DS_Store
 Thumbs.db
@@ -35,3 +34,4 @@ Thumbs.db
 node_modules/
 
 # Ignore output folders
+Downloads/
