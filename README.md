@@ -1,34 +1,46 @@
-# RoboAutomacaoSistemaWeb
+# Automação Web com UiPath
 
-Este projeto contém um robô UiPath projetado para automatizar interações com um sistema web. Ele provavelmente processa dados de um arquivo Excel (`arquivos/challenge.xlsx`) para realizar tarefas em um site.
+Este projeto de UiPath executa um processo de automação de duas etapas, projetado para interagir com sistemas web, processar arquivos e consolidar dados.
+
+## Funcionalidades
+
+O robô é dividido em duas etapas principais:
+
+### Etapa 1: Preenchimento de Formulário Web
+
+Nesta fase, o robô lê os dados de uma planilha Excel (`arquivos/challenge.xlsx`) e os utiliza para preencher e enviar um formulário em uma aplicação web. O objetivo é inserir múltiplos registros de forma automatizada, aumentando a eficiência e reduzindo erros manuais.
+
+### Etapa 2: Extração de Dados de Faturas (Invoices)
+
+A segunda etapa consiste em baixar faturas (invoices) de um sistema, extrair informações relevantes de cada uma e consolidar esses dados em um único arquivo CSV (`arquivos/Dados.csv`). Este processo otimiza a coleta de dados financeiros ou de faturamento.
 
 ## Estrutura do Projeto
 
-*   `Main.xaml`: O arquivo principal do fluxo de trabalho que orquestra o processo de automação.
-*   `project.json`: Define os metadados do projeto, dependências e opções de execução.
-*   `arquivos/challenge.xlsx`: Um arquivo Excel provavelmente usado como dados de entrada para a automação.
-
-## Pré-requisitos
-
-*   UiPath Studio (recomendado versão 24.10.16.0 ou mais recente)
-*   Os seguintes pacotes de atividades do UiPath:
-    *   `UiPath.Excel.Activities`
-    *   `UiPath.System.Activities`
-    *   `UiPath.UIAutomation.Activities`
-    *   (Outras dependências listadas em `project.json` serão gerenciadas automaticamente pelo UiPath Studio)
+- **`Main.xaml`**: Orquestrador principal do robô, responsável por invocar as duas etapas do processo.
+- **`ProcessBox/`**: Contém os fluxos de trabalho (workflows) para cada etapa.
+  - `PrimeiroProcesso/`: Lógica para o preenchimento do formulário.
+  - `SegundoProcesso/`: Lógica para o download e extração dos dados das faturas.
+- **`arquivos/`**: Armazena os arquivos de dados utilizados e gerados pelo robô.
+  - `challenge.xlsx`: Planilha de entrada para a Etapa 1.
+  - `Dados.csv`: Arquivo de saída gerado na Etapa 2.
+- **`project.json`**: Arquivo de configuração do projeto, com dependências e metadados.
 
 ## Como Executar
 
-1.  **Abra o projeto:** Abra `project.json` ou `Main.xaml` no UiPath Studio.
-2.  **Certifique-se de que as dependências estão resolvidas:** O UiPath Studio deve restaurar automaticamente quaisquer pacotes de atividades ausentes.
-3.  **Configure os dados de entrada:** Verifique se o arquivo `arquivos/challenge.xlsx` contém os dados necessários no formato esperado.
-4.  **Execute o fluxo de trabalho:** Clique no botão "Executar" no UiPath Studio para executar a automação.
-5.  
+1.  **Abra o projeto** no UiPath Studio.
+2.  **Restaure as dependências** do projeto, se necessário.
+3.  **Verifique os dados de entrada** no arquivo `arquivos/challenge.xlsx`.
+4.  **Execute o projeto** a partir do `Main.xaml`.
 
+## Resultados da Execução
 
-Desafio cumprido
-![Etapa 1](image/README/1767650095637.png)
-![Etapa 2](image/README/1767646147524.png)
+As imagens abaixo confirmam a execução bem-sucedida de ambas as etapas do processo de automação.
 
-"RPA criado como desafio do curso Automatize Process com Erimateia"
+**Sucesso da Etapa 1 - Preenchimento do Formulário:**
+![Resultado do Preenchimento do Formulário](image/README/1767650095637.png)
 
+**Sucesso da Etapa 2 - Consolidação dos Dados:**
+![Resultado da Extração de Dados](image/README/1767646147524.png)
+
+---
+*Este RPA foi criado como parte do desafio do curso "Automatize Processos com Erimatéia".*

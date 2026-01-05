@@ -156,7 +156,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="506,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;Criando CSV&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="506,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Criando CSV&quot;]" />
       <ui:AppendWriteCsvFile PathResource="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[in_dtInvoices]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Write CSV" FilePath="arquivos\Dados.csv" sap:VirtualizedContainerService.HintSize="506,234" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" ShouldQuote="True" />
       <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Edge Rpa Challenge" sap:VirtualizedContainerService.HintSize="506,1282" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InUiElement="[in_ElementoWeb]" InteractionMode="DebuggerApi" ScopeGuid="afce1d15-f0ef-4a70-b22c-381e93d7f1cd" Version="V2">
         <uix:NApplicationCard.Body>
