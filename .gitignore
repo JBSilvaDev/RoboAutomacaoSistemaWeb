@@ -34,6 +34,3 @@ Thumbs.db
 node_modules/
 
 # Ignore output folders
-.runtime/
-.storage/
-.tmh/
